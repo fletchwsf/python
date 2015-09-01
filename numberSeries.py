@@ -6,16 +6,16 @@ def Fibonacci(n):
         print b,
         a, b = b, a + b
  
-# Calculate Pie to n decimal places 3.1459
+# Calculate Pie to n decimal places 3.1459...
 def Pie(n):
+ result = []
  a = 22
  b = 7
- result = []
  counter = 0
  while counter < n:
+     result.append(a/b)
      remainder = a % b
-     a = remainder 
-     result.append(remainder)
+     a = remainder * 10
      counter = counter + 1
  print result   
 
