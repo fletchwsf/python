@@ -8,14 +8,15 @@ def Fibonacci(n):
  
 # Calculate Pie to n decimal places 3.1459...
 def Pie(n):
- result = []
- a = 22
- b = 7
+ result = []   # an array to accumulate the answer
+ numerator = 22
+ denominator = 7
+ 
  counter = 0
  while counter < n:
-     result.append(a/b)
-     remainder = a % b
-     a = remainder * 10
+     result.append(numerator/denominator)
+     remainder = numerator % denominator
+     numerator = remainder * 10
      counter = counter + 1
  print result   
-
+ 
