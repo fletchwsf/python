@@ -3,13 +3,13 @@
 #------------------------------------------------------------
 
 # check for n greater than (x)
-def greaterThan(n,x)
+def greaterThan(n,x):
     if ( n > x):
         return n
     #else
     print "You entered:" + str(n)
-    print "Enter value greater than" + str(x)
-    return(null) 
+    print "Enter value greater than:" + str(x)
+    return False 
 
 # check for n between (x,y)
 def rangeBetween(n,x,y ):
@@ -18,9 +18,11 @@ def rangeBetween(n,x,y ):
     #else
     print "You entered:" + str(n)
     print "Enter value between " + str(x) +  " and " + str(y)
-    return(null) 
+    return False
 
 #------------------------------------------------------------
 # Type checks
 
 # check for integer type
+
+

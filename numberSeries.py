@@ -37,13 +37,22 @@ def Pie(n):
 # call GCD(a,b)
 # Find the greatest common divisor using Euclide's algorithm
 #-----------------------------------------------------------
-def GCD(a,b):
+debug = False
 
-# if a < b swap places per the algorithm
+def GCD(a_in,b_in):
+    # use absolute value to avoid -1
+    a = abs(a_in)
+    b = abs(b_in)
+    # if a < b swap places per the algorithm
     if ( a < b ):
         tmp = a
         a = b
         b = tmp
+    
+    # one last sanity check
+    if ( (a < 1) or ( b < 1)):
+        print "enter values greater than zero!"
+        return False
     
     # subtract as many multiples of b from a as possible
     # as long as the remainder is > b
@@ -57,7 +66,8 @@ def GCD(a,b):
     # update b with the value of the remainder and a with the
     # value of b and repeat
     if (remainder == 0):
-        print "found GCD value of:" + str(b)
+        if debug:
+            print "found GCD value of:" + str(b)
         return (b)
     # else
     a = b
